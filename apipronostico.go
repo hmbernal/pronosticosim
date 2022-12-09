@@ -28,7 +28,7 @@ func main() {
 		//prc := exec.Command("/ucm/middleware/go/src/ucmgo/applications/pronosticoviento/pronosticoviento",tipo, "7.7", "6.7", "5.7", "4.7", "3.7", "2.7", "1.7")  //<<< FUNCIONA
 		//prc := exec.Command("/ucm/middleware/go/src/ucmgo/applications/pronosticoviento/pronosticoviento",tipo, "77.7", "66.7", "5.7", "4.7", "3.7", "2.7", "1.7")  //*** NO FUNCIONA
 
-		prc := exec.Command("./pronosticoviento.bin", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6])
+		prc := exec.Command("./pronosticoviento.exe", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6])
 
 		out := bytes.NewBuffer([]byte{})
 		prc.Stdout = out
@@ -63,7 +63,7 @@ func main() {
 		}
 
 		//./pronosticogeneracion.bin" D 7.7 6.6 5.5 4.4 3.3 2.2 1.1
-		prc2 := exec.Command("./pronosticogeneracion.bin", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6])
+		prc2 := exec.Command("./pronosticogeneracion.exe", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6])
 
 		out2 := bytes.NewBuffer([]byte{})
 		prc2.Stdout = out2
@@ -101,7 +101,7 @@ func main() {
 		//Horas
 	} else {
 		//No acepta 8.0, 22.3
-		prc := exec.Command("./pronosticoviento.bin", tipo, "4.7", "3.6", "2.5", "2.4", "2.3", "9.2", "8.1", "8.1", "8.1", "8.1", "2.3", "2.3", "1.2", "1.1", "1.5", "9.1", "8.3", "7.1", "6.2", "5.3", "4.4", "3.5", "2.2", "1.1")
+		prc := exec.Command("./pronosticoviento.exe", tipo, "4.7", "3.6", "2.5", "2.4", "2.3", "9.2", "8.1", "8.1", "8.1", "8.1", "2.3", "2.3", "1.2", "1.1", "1.5", "9.1", "8.3", "7.1", "6.2", "5.3", "4.4", "3.5", "2.2", "1.1")
 
 		out := bytes.NewBuffer([]byte{})
 		prc.Stdout = out
@@ -134,7 +134,7 @@ func main() {
 		}
 
 		//./pronosticogeneracion.bin" D 7.7 6.6 5.5 4.4 3.3 2.2 1.1
-		prc2 := exec.Command("./pronosticogeneracion.bin", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6], ss[7], ss[8], ss[9], ss[10], ss[11], ss[12], ss[13], ss[14], ss[15], ss[16], ss[17], ss[18], ss[19], ss[20], ss[21], ss[22], ss[23])
+		prc2 := exec.Command("./pronosticogeneracion.exe", tipo, ss[0], ss[1], ss[2], ss[3], ss[4], ss[5], ss[6], ss[7], ss[8], ss[9], ss[10], ss[11], ss[12], ss[13], ss[14], ss[15], ss[16], ss[17], ss[18], ss[19], ss[20], ss[21], ss[22], ss[23])
 
 		out2 := bytes.NewBuffer([]byte{})
 		prc2.Stdout = out2
